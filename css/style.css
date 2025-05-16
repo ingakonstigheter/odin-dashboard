@@ -13,6 +13,9 @@ h1 {
     margin-left: 32px;
     margin-top: 8px;
 }
+h3 {
+    font-size: 1.1rem;
+}
 /* || Typography */
 html {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif ,'Times New Roman', Times, serif;
@@ -190,23 +193,43 @@ main {
     gap: 32px;
 }
 
-.announcments {
+.right-side-container{
     grid-column-start: 2;
     grid-column-end: 3;
 
     display: grid;
     grid-template-rows: 32px 1fr;
-    gap: 16px;
 }
 
 .announcment-container {
+    margin-top: 16px;
     display: grid;
-    grid-auto-columns: 1fr 1fr;
+    grid-auto-columns: 1fr 1fr 1fr;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     align-items: center;
-    
+    padding: 8px 16px;
+    justify-content: space-around;
+}
+
+.announcment {
+    display: grid;
+    grid-template-rows: 1fr 2r;
+}
+.announcment:nth-child(even) {
+    margin: 8px 0;
+    padding: 8px 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.2) ;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+}
+.announcment > p{
+    max-height: 40px;
+    line-height: 0.9rem;
+    font-size: smaller;
+    overflow: hidden;
+
 }
 
 .trending {
